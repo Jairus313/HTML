@@ -1,0 +1,32 @@
+<html>
+    <script>
+        function add(x,y){
+            x = document.getElementById('val1').value;
+            y = document.getElementById('val2').value;
+            ans=parseInt(x)+parseInt(y);
+            document.getElementById('Result').value=ans;
+        }
+    </script>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+    <center>
+    <table>
+        <tr>
+            <td><input type = "text" id = "val1" size = "35" value = " "></td>          
+        </tr>
+        <tr>
+            <td><input type = "text" id = "val2" size = "35" value = " "></td>          
+        </tr>
+
+        <tr align = "center">
+        <td><button onclick="add(val1,val2)">Add</button>
+        </tr>
+        <tr>
+            <td><input type = "text" id = "Result" size = "35"></td>
+        </tr>
+    </table>
+    </center>
+    </body>
+</html>
