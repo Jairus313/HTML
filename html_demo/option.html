@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Select your country:
+<br>
+<select id="select">
+  <option value="India">India</option>
+  <option value="America">America</option>
+  <option value="Australia">Australia</option>
+  <option value="Germany">Germany</option>
+</select>
+
+<button onclick="myFunction()">Try it</button><br><br>
+
+<p> Hello </p>
+<p id="demo"> </p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("select").value;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
