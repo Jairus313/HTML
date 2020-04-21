@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+  Select your operation:
+  <select id="mySelect">
+    <option value="add">add</option>
+    <option value="sub">sub</option>
+    <option value="mul">mul</option>
+    <option value="div">div</option>
+  </select>
+</form>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<form>
+    <input type="text" id="demo"><br><br>
+</form>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo").value = x;
+}
+</script>
+
+</body>
+</html>
