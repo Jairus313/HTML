@@ -1,32 +1,46 @@
 <html>
-    <script>
-        function add(x,y){
-            x = document.getElementById('val1').value;
-            y = document.getElementById('val2').value;
-            ans=parseInt(x)+parseInt(y);
-            document.getElementById('Result').value=ans;
-        }
-    </script>
     <head>
         <title>Calculator</title>
     </head>
     <body>
-    <center>
-    <table>
-        <tr>
-            <td><input type = "text" id = "val1" size = "35" value = " "></td>          
-        </tr>
-        <tr>
-            <td><input type = "text" id = "val2" size = "35" value = " "></td>          
-        </tr>
+        <center>
+            <input type = "text" id = "val1" size = "35" value = " ">
+            <input type = "text" id = "val2" size = "35" value = " "><br>
+            <form>
+                Select your operation:
+                <select id="mySelect">
+                    <option value="add">add</option>
+                    <option value="sub">sub</option>
+                    <option value="mul">mul</option>
+                    <option value="div">div</option>
+                </select>
+            </form>
+                <button onclick="operation()">Result</button><br>
+                <input type="text" id="result"><br><br>
+            <script>
+            function operation(){
+                x = document.getElementById('val1').value;
+                y = document.getElementById('val2').value;
+                operator = document.getElementById("mySelect").value;
 
-        <tr align = "center">
-        <td><button onclick="add(val1,val2)">Add</button>
-        </tr>
-        <tr>
-            <td><input type = "text" id = "Result" size = "35"></td>
-        </tr>
-    </table>
-    </center>
+                if ( operator == "add" ){
+                    ans=parseInt(x)+parseInt(y);
+                    document.getElementById('result').value=ans;                    
+                    }
+                else if ( operator == "sub" ){
+                    ans=parseInt(x)-parseInt(y);
+                    document.getElementById('result').value=ans;                    
+                    }
+                else if ( operator == "mul" ){
+                    ans=parseInt(x)*parseInt(y);
+                    document.getElementById('result').value=ans;                    
+                    }
+                else if ( operator == "div" ){
+                    ans=parseInt(x)/parseInt(y);
+                    document.getElementById('result').value=ans;                    
+                    }
+                }
+            </script>
+        </center>
     </body>
 </html>
